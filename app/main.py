@@ -11,13 +11,7 @@ def create_person_list(people: list) -> list:
     lista_people = []
 
     for person_ in people:
-        person_class = Person(person_["name"], person_["age"])
-
-        if "wife" in person_ and person_["wife"]:
-            person_class.wife = person_["wife"]
-
-        if "husband" in person_ and person_["husband"]:
-            person_class.husband = person_["husband"]
+        Person(person_["name"], person_["age"])
 
     for person in people:
         if "wife" in person and person["wife"]:
